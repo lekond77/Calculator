@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <script src="calculatrice.js" defer></script>
+    <link rel="stylesheet" href="calculator.css" />
+  </head>
+  <body>
+    <div id="banner">
+      <h1>Calculator</h1>
+      <table>
+        <thead>
+          <tr>
+            <td colspan="4" id="screen">
+              <div id="display-input">
+                <p></p>
+              </div>
+              <div id="output">
+                <p></p>
+              </div>
+              <div id="programer-input" hidden>
+                <p>
+                  <input type="text" id="decimal" disabled />
+                  <button onclick="convertDecimalValue()">DEC</button>
+                </p>
+                <p>
+                  <input type="text" id="binary" disabled />
+                  <button onclick="convertBinaryValue()">BIN</button>
+                </p>
+                <p>
+                  <input type="text" id="hexadecimal" disabled />
+                  <button onclick="convertHexValue()">HEX</button>
+                </p>
+              </div>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input
+                type="button"
+                value="AC"
+                id="delete"
+                onclick="cleanScreen()"
+              />
+            </td>
+            <td>
+              <input type="button" value="SUPP" onclick="cleanLastDigit()" />
+            </td>
+            <td>
+              <input type="button" value="%" onclick="perCent()" />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="/"
+                id="slash"
+                onclick="display('/'); convertFromHex('A')"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="button"
+                value="7"
+                onclick="display('7'); convertFromDecimal('7'); convertFromHex('7')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="8"
+                onclick="display('8'); convertFromDecimal('8'); convertFromHex('8')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="9"
+                onclick="display('9'); convertFromDecimal('9'); convertFromHex('9')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="X"
+                id="times"
+                onclick="display('*'); convertFromHex('B')"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="button"
+                value="4"
+                onclick="display('4'); convertFromDecimal('4'); convertFromHex('4')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="5"
+                onclick="display('5'); convertFromDecimal('5'); convertFromHex('5')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="6"
+                onclick="display('6'); convertFromDecimal('6'); convertFromHex('6')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="-"
+                id="minus"
+                onclick="display('-'); convertFromHex('C')"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="button"
+                value="1"
+                onclick="display('1'); convertFromBinary('1'); convertFromDecimal('1'); convertFromHex('1')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="2"
+                onclick="display('2'); convertFromDecimal('2'); convertFromHex('2')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="3"
+                onclick="display('3'); convertFromDecimal('3'); convertFromHex('3')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="+"
+                id="plus"
+                onclick=" display('+'); convertFromHex('D')"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><input type="button" value="Function" id="fct" /></td>
+            <td>
+              <input
+                type="button"
+                value="0"
+                onclick="display('0'); convertFromBinary('0'); convertFromDecimal('0'); convertFromHex('0')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="."
+                id="comma"
+                onclick=" display('.'); convertFromHex('F')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="+/-"
+                onclick="((this.value === '+/-' )?insertMinustoFront():display('')); convertFromHex('E')"
+                id="insert-minus"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <input id="calcul" onclick="calcul()" value="=" type="button" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

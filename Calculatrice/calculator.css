@@ -1,0 +1,77 @@
+body {
+  width: 50em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+table {
+  width: 18em;
+  height: 22em;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 1px #f9f9f9;
+}
+
+#banner {
+  padding: 2em;
+  width: 40em;
+  background-color: #848484;
+}
+
+#screen {
+  display: flex;
+  flex-direction: column;
+  width: 18em;
+  height: 6em;
+  background-color: #f9f9f9;
+}
+tr {
+  display: flex;
+  justify-content: space-around;
+}
+
+input[type="button"] {
+  width: 5.2em;
+  height: 3em;
+  border: none;
+}
+
+#calcul {
+  width: 21.5em;
+  height: 3em;
+}
+#display-input p {
+  text-align: left;
+  padding-left: 0.5em;
+}
+#output p {
+  text-align: right;
+  padding-right: 1em;
+}
+#programer-input p {
+  display: flex;
+  margin-bottom: -0.7em;
+  justify-content: space-between;
+}
+p input {
+  outline: none;
+  width: 17.5em;
+  height: 1.3em;
+  border: #e9e9ed;
+}
+p button {
+  width: 4em;
+  border: none;
+}
+
+#hexadecimal {
+  text-transform: uppercase;
+}
+#fct {
+  background-color: #b7ef00;
+}
+
+button:hover,
+input[type="button"]:hover {
+  cursor: pointer;
+}
